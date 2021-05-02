@@ -1,0 +1,37 @@
+# Used to get an access token given an autorization key
+@baseUrl = "https://ncov2019-admin.firebaseapp.com/"
+@authorization ="2e3c5b9d1276d73b4fed20bb1a2f463bd8d2c36b18f482fa118e0900df855c9d"
+@accessToken ="c92c570b5762b38885f7a97dc4b2063fe1849a010eef0cf8b7e3cb485aab21b8"
+
+POST {{baseUrl}}/token
+Authorization: Basic {{authorization}}
+
+###
+
+GET {{baseUrl}}/cases
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
+###
+
+GET {{baseUrl}}/casesSuspected
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
+###
+
+GET {{baseUrl}}/casesConfirmed
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
+###
+
+GET {{baseUrl}}/deaths
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
+###
+
+GET {{baseUrl}}/recovered
+Accept: application/json
+Authorization: Bearer {{accessToken}}
