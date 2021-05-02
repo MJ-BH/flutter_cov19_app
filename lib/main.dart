@@ -3,9 +3,13 @@ import 'package:flutter_cov19_app/app/services/api.dart';
 import 'package:flutter_cov19_app/app/services/api_service.dart';
 import 'package:flutter_cov19_app/repositories/data_repository.dart';
 import 'package:flutter_cov19_app/ui/dashboard.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  Intl.defaultLocale = 'en_GB';
+  await initializeDateFormatting();
   runApp(MyApp());
 }
 
